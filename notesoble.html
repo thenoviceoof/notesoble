@@ -1,0 +1,46 @@
+<html>
+<head>
+
+<script type="text/javascript" src="jquery-1.4.2.js"></script>
+<script type="text/javascript" src="shortcut.js"></script>
+<script type="text/javascript" src="editor.js"></script>
+<style>
+.para {font-family:monospace;font-size:1.5em;border:1px orange solid;
+  padding:0.4em;margin:0.4em;}
+
+#keytrack {padding:0.4em;font-size:2em;display:block;opacity:0;
+  border:1px gray solid;background-color:gray;
+  position:absolute;bottom:1.5em;right:1.5em;}
+
+#cursor {width:5px;height:10px;display:inline;
+  font-weight:bold;color:black;
+  position:relative;left:-4px;}
+#restline {position:relative;left:-8px;}
+
+#insert{position:absolute;border:1px black solid;overflow:auto;
+  width:12em;height:18em;display:none;background-color:rgb(230,230,230);}
+#insert h1 {font-size:100%;margin:0;padding:0.4em;background-color:gray;}
+#insert input {margin:0.2em;}
+#insert ul {list-style-type:none;margin-left:0;margin-top:0.2em;padding:0;}
+#insert li {margin:0;padding:0.2em;border-top:1px black solid;}
+</style>
+
+</head>
+<body>
+<div id="cont">
+
+<div id="para0" class="para">
+</div>
+
+</div>
+
+<div id="keytrack">
+</div>
+
+<div id="insert">
+<h1>Insert</h1>
+<input type="text" />
+<ul><li>Array</li><li>Stuff</li></ul>
+</div>
+</body>
+</html>
