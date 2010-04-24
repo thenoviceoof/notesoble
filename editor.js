@@ -21,8 +21,8 @@ function offsetPos(pos,left,top){
 
 /* FADING CODE */
 
-keyFade = false;
-duration = 1800;
+var keyFade = false;
+var duration = 1800;
 function fadeFade(obj){
     if(keyFade){
 	obj.css('opacity',obj.css('opacity')-50.0/duration);
@@ -42,11 +42,11 @@ function fadeControl(obj){
 
 /* DATA/TEXT TRACKING */
 
-grabInput = true;
+var grabInput = true;
 
-cur_para = 0; num_para = 1; prev_para = 0;
-cur_pos  = 0;
-datacont = [[]];
+var cur_para = 0; var num_para = 1; var prev_para = 0;
+var cur_pos  = 0;
+var datacont = [[]];
 
 function addchar(char){
     datacont[cur_para].splice(cur_pos+1,0,char);
@@ -186,3 +186,7 @@ $(document).keypress(function(event){
 	fadeControl($('#keytrack'));
 });
 
+/* STARTUP */
+
+$(document).ready(function(){update();});
+$(window).unload(function(){storage.setItem("doc",JSON.stringify(datacont));});
