@@ -1,25 +1,19 @@
-var n;
+// Hello world!
 
 $(document).ready(function() {
-	$(".topLevel, .midLevel, .botLevel, .nope").prepend("<div class='up'></div>");
-	$(".topLevel, .midLevel, .botLevel, .nope").prepend("<div class='down'></div>");
+	$(".cont").prepend("<div class='fold'></div>");
+	$(".last .cont").hide();
 
-	$(".up").click(function(e){
-		$(this).parent().removeClass("midLevel");
-		$(this).parent().addClass("botLevel");
-		var c = $(this).parent().children(".midLevel, .botLevel");
-		n = c;
-		c.removeClass("midLevel");
-		c.removeClass("botLevel");
-		c.addClass("nope");
-	    });
-
-	$(".down").click(function(e){
-		if(!$(this).parent().hasClass("topLevel")) {
-		    $(this).parent().removeClass("botLevel");
-		    $(this).parent().addClass("midLevel");
-		}
+	$(".fold").click(function(e){
 		var p = $(this).parent();
-		p.children(".nope").removeClass("nope").addClass("botLevel");
+		if($(this).parent().hasClass("last")) {
+		    $(".last > .cont").show();
+		    $(".last > .cont").addClass("last");
+		    p.removeClass("last");
+		} else {
+		    p.addClass("last");
+		    p.children(".cont").hide(); 
+		}
 	    });
+
     });
