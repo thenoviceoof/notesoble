@@ -6,13 +6,14 @@ $(document).ready(function() {
 
 	$(".fold").click(function(e){
 		var p = $(this).parent();
-		if($(this).parent().hasClass("last")) {
-		    $(".last > .cont").show();
-		    $(".last > .cont").addClass("last");
+		if(p.hasClass("last")) {
+		    p.children(".cont").show();
+		    p.children(".cont").addClass("last");
 		    p.removeClass("last");
 		} else {
+		    p.find(".cont").hide();
+		    p.find(".last").removeClass("last");
 		    p.addClass("last");
-		    p.children(".cont").hide(); 
 		}
 	    });
 
