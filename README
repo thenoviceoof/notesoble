@@ -2,6 +2,7 @@
 Notesoble / Drill-docs
 **********************************************************************
 
+--------------------------------------------------
 WHAT???
 --------------------------------------------------
 
@@ -9,16 +10,45 @@ writing documents in a quick way (taking notes)
 writing a document in a details-on-demand way
 combine both of them?!
 
+--------------------------------------------------
+IDEAS
+--------------------------------------------------
+
+2 ways to do things when folding out: hide previous, or keep
+  default - keep
+
+resource tracking - auto, by convention ~ latex tracking
+	 reference integration?
+
+auto indexing - words
+
+have to do node.js - talking to the backend
+
+integrate mathjax
+
+some sort of syntax highlighter
+
+integrate some sort of persistant protovis thing?
+
+table editor?
+
+emacs/vim (hard) keybindings
+
+side-by-side docs/notes
+	     tree'd out structures?
+
+handle notes and other asides
+
+--------------------------------------------------
 TODO
 --------------------------------------------------
 
 Right now, working on generating the detailed documents
-get a reference compiler? - in python, in javascript?
+get a reference compiler? - in javascript? python?
+    javascript: just import the json, have to have it anyways
+    have something to demo
 hmm, should I try to figure out wave in a box?
      no, wave isn't targeted towards the project goals
      I don't think it would be easily hackable
      well, we're about to find out
 
-have to do node.js - talking to the backend
-
-integrate mathjax
