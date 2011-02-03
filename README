@@ -5,5 +5,20 @@ Notesoble / Drill-docs
 WHAT???
 --------------------------------------------------
 
-writing documents in a quick way
-writing a document in a clear way (drill down)
+writing documents in a quick way (taking notes)
+writing a document in a details-on-demand way
+combine both of them?!
+
+TODO
+--------------------------------------------------
+
+Right now, working on generating the detailed documents
+get a reference compiler? - in python, in javascript?
+hmm, should I try to figure out wave in a box?
+     no, wave isn't targeted towards the project goals
+     I don't think it would be easily hackable
+     well, we're about to find out
+
+have to do node.js - talking to the backend
+
+integrate mathjax

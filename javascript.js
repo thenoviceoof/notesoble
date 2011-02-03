@@ -1,7 +1,7 @@
 // Hello world!
 
 $(document).ready(function() {
-	$(".cont").prepend("<div class='fold'></div>");
+	$(".cont").filter(":not(.bot)").prepend("<div class='fold'></div>");
 	$(".last .cont").hide();
 
 	$(".fold").click(function(e){

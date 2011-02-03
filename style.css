@@ -1,5 +1,5 @@
-.cont {border:1px #A0A0A0 solid;margin:1em;}
-.none {display:none;}
+.cont { border:1px #A0A0A0 solid;margin:1em; }
+.bot { padding:0.5em; }
 
 .cont > .fold { border:0.8em solid white; 
 		border-width:1em 0.8em 0 0.8em;
