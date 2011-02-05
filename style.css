@@ -1,20 +1,34 @@
-header { display:block; }
+body { margin:0;padding:0;
+       position:absolute;left:0;top:0;
+       width:100%; } 
 
-section,summary {background-color:rgba(0,0,255,0.05);}
+header { display:block; 
+	 background-color:rgba(0,255,0,0.1);
+	 padding:0.2em;margin:0; }
+header #title { }
+header #author { }
+h1,h2,h3,h4,h5,h6 { margin:0; }
+header #copyright { margin:0 4em; }
+header p { margin:0; }
+.meta { border:1px gray solid;margin:0.5em;padding:0.5em;
+	display:none;}
+
+section,summary { background-color:rgba(0,0,255,0.02); }
+
+.cont > section { margin:0; }
 
 section { border:1px #E0E0E0 solid;
 	  border-left-color:B0B0B0;border-left-width:2px;
-	  margin:1em;
+	  margin:0.5em;padding;0.5em;
 	  display:block; }
 summary { border:1px #F0F0F0 solid;display:block;
 	  margin:0.3em;padding:0.2em; }
 
-.fold { border:0.8em solid white;
-	display:inline-block;
+.fold { border:0.8em solid rgba(0,0,0,0);
+	display:inline-block;float:left;
 	width:0;margin:0.2em;padding:0;
-	cursor:pointer;}
-section > .fold { border-width:1em 0.8em 0 0.8em;
-		  border-color:gray white; }
-.last > .fold { border-width:0.8em 0 0.8em 1em;
-		border-color:white gray; }
-.content { display:inline-block; }
+	cursor:pointer;
+	border-width:1em 0.8em 0 0.8em;
+	border-color:gray rgba(255,255,255,0); }
+.last > .fold, .folded { border-width:0.8em 0 0.8em 1em;
+			 border-color:rgba(255,255,255,0) gray; }

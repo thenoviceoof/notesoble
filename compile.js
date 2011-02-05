@@ -6,8 +6,26 @@ function compile(obj,doc) {
     
     // handle meta information to be displayed
     var meta = doc["meta"];
-    var title = header.append($("<h1></h1>",{html:meta['title']}));
-    var author = header.append($("<h2></h2>",{html:meta['author']}));
+    if(meta['title'])
+	header.append($("<h1></h1>",{html:meta['title'],
+			"id":"title"}));
+    if(meta['author'])
+	header.append($("<h2></h2>",{html:meta['author'],
+			"id":"author"}));
+    var metaCont = $("<div/>",{'class':'meta'});
+    if(meta['copyright']) {
+	metaCont.append($("<h2/>",{html:"Copyright"}));
+	metaCont.append($("<p></p>",{html:meta['copyright'],
+			"id":"copyright"}));
+    }
+    if(meta['version']) {
+	metaCont.append($("<h2/>",{html:"Versions"}));
+	metaCont.append($("<p></p>",{html:meta['version'],
+			"id":"version"}));	
+    }
+
+    header.append(metaCont);
+    header.prepend($("<div/>",{"class":"fold folded"}));
     
     // container holder
     var cont = $("<div class='cont'></div>");
@@ -21,15 +39,24 @@ function compile(obj,doc) {
 
 // recursively generate the content
 function gen_sections(docs) {
+    // if not a list
+    // here to handle bad errors
+    if(typeof docs == "string") {
+	return gen_text({"text":docs});
+    }
     var content = $("<section/>",
 		    {'class':'',});
     for(var i in docs) {
 	if(typeof docs[i] == "string") {
-	    var sum = $("<summary/>").html(docs[i]);
+	    // handle the raw strings
+	    var sum = gen_text({"text":docs[i]});
 	    content.append(sum);
-	    // might have to include a hash option
-	    // check for a particular attribute
-	} else { // it's an array!
+	} else if(docs[i]["text"]) {
+	    // handle the hashes
+	    var sum = gen_text(docs[i]);
+	    content.append(sum);
+	} else { 
+	    // it's an array!
 	    content.append(gen_sections(docs[i]));	    
 	}
     }
@@ -40,6 +67,11 @@ function gen_sections(docs) {
     // maybe hand back the height also?
 }
 
+function gen_text(dict) {
+    var sum = $("<summary/>").html(dict["text"]);
+    return sum;
+}
+
 $(document).ready(function(){
-	compile($("#doc-cont"),data);
+	compile($("body"),data);
     });
