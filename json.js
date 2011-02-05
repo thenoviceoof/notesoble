@@ -3,7 +3,8 @@ var data =
 	    "author": "Rebecca Murphey"},
   "docs":
   ["Teaches you the JQuery Fundamentals",
-   ["Section 0 - Welcome"],
+   ["Section 0 - Welcome",
+    ["A bunch of things","More things"]],
    ["Section 1 - Javascript 101"],
    ["Section 2 - jQuery: Basic Concepts"],
    ["Section 3 - jQuery Core"]
