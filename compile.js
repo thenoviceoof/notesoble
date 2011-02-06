@@ -1,3 +1,5 @@
+//var P = Parse.Simple.Creole();
+
 // hand in a jquery obj
 function compile(obj,doc) {
     // handle meta information
@@ -111,11 +113,24 @@ function gen_text(dict) {
 	var s = $("<h6/>").html(dict["text"]); break;
     case "code":
 	var s = $("<pre/>");
+	s.html("<caption>Code:</caption>");
 	s.append($("<code/>",{html:dict["text"]}));
 	hljs.highlightBlock(s.find("code")[0]);
 	break;
+    case "math":
+	var s = $("<code/>",{html:"$$"+dict["text"]+"$$",
+			     "class":"math",'id':'aoeu'});
+	//var q = MathJax.Hub.queue;
+	//var math = null;
+	/*q.Push(function(){
+		math = MathJax.Hub.getAllJax("aoeu")[0];
+	    });
+	    q.Push(["Text",math,s[0].innerHTML]);*/
+	//window.setTimeout('MathJax.Hub.Queue(["Typeset",MathJax.Hub,"aoeu"])',1000);
+	break;
     default:
 	var s = $("<summary/>").html(dict["text"]);
+	//P.parse(s[0],dict["text"])
     }
     return s;
 }
