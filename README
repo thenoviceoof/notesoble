@@ -11,6 +11,8 @@ write a document in a details-on-demand way
 write a document that uses visual elements to facilitate comprehension
 combine all of them?!
 
+Have to 
+
 --------------------------------------------------
 IDEAS
 --------------------------------------------------
@@ -51,7 +53,7 @@ Right now, working on generating the detailed documents
    * http://en.wikipedia.org/wiki/User:Pilaf/InstaView
  * wikiwyg
    * http://www.wikiwyg.net/
-trying to get MathJax to work
+inline MathJax
 
 backend - saving
 frontend, editing
@@ -72,3 +74,4 @@ javascript over python for reference compiler
 no wave in a box
 using highlight.js, not pygments or syntaxhighlighter
 swapable wiki syntax
+use MathJax

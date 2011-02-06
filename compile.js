@@ -118,8 +118,9 @@ function gen_text(dict) {
 	hljs.highlightBlock(s.find("code")[0]);
 	break;
     case "math":
-	var s = $("<code/>",{html:"$$"+dict["text"]+"$$",
+	var s = $("<div/>",{html:"$$"+dict["text"]+"$$",
 			     "class":"math",'id':'aoeu'});
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"aoeu"]);
 	//var q = MathJax.Hub.queue;
 	//var math = null;
 	/*q.Push(function(){

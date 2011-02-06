@@ -41,7 +41,9 @@ section, summary { background-color:rgba(0,0,255,0.02); }
 
 .cont > section { margin:0; }
 
-pre, code, section { border:1px #D0D0D0 solid;
+div.math { background-color:rgba(255,0,0,0.04); }
+
+div.math, pre, code, section { border:1px #D0D0D0 solid;
 		border-left-color:B0B0B0;border-left-width:2px;
 		margin:0.2em;padding:0.2em;
 		display:block; }

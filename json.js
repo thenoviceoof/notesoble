@@ -6,7 +6,7 @@ var data =
   "docs":
   ["Notesoble is your one stop resource for next generation documentation chock-full of interaction and an emphasis on facilitatingc comprehension",
    "Click the arrows to the left to expand and fold up content",
-{"text":"2+2 \LaTeX","type":"math"},
+{"text":"2+2 \\LaTeX","type":"math"},
    [{"text":"News","type":"h1"},
     ["Hello world!"]],
    [{"text":"Quickstart with Notesoble","type":"h1"},
