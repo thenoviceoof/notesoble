@@ -12,19 +12,26 @@ function compile(obj,doc) {
     if(meta['author'])
 	header.append($("<h2></h2>",{html:meta['author'],
 			"id":"author"}));
-    var metaCont = $("<div/>",{'class':'meta'});
+
+    // meta container
+    var metaCont = $("<table/>",{'class':'meta'});
     if(meta['copyright']) {
-	metaCont.append($("<h2/>",{html:"Copyright"}));
-	metaCont.append($("<p></p>",{html:meta['copyright'],
+	var row = $("<tr/>");
+	row.append($("<td/>",{html:"Copyright"}));
+	row.append($("<td/>",{html:meta['copyright'],
 			"id":"copyright"}));
+	metaCont.append(row)
     }
     if(meta['version']) {
-	metaCont.append($("<h2/>",{html:"Versions"}));
-	metaCont.append($("<p></p>",{html:meta['version'],
-			"id":"version"}));	
+	var row = $("<tr/>");
+	metaCont.append($("<td/>",{html:"Versions"}));
+	metaCont.append($("<td/>",{html:meta['version'],
+			"id":"version"})); 
+	metaCont.append(row)
     }
-
+    
     header.append(metaCont);
+    // fold away most of the meta info
     var metaFold = $("<div/>",{"class":"fold folded"});
     metaFold.click(function(){
 	    $(".meta").toggle();
@@ -78,7 +85,30 @@ function gen_sections(docs) {
 }
 
 function gen_text(dict) {
-    var sum = $("<summary/>").html(dict["text"]);
+    switch(dict["type"]) {
+    case "h1":
+    case "section title":
+	var sum = $("<h1/>").html(dict["text"]);
+	break;
+    case "h2":
+    case "chapter title":
+	var sum = $("<h2/>").html(dict["text"]);
+	break;	
+    case "h3":
+	var sum = $("<h3/>").html(dict["text"]);
+	break;	
+    case "h4":
+	var sum = $("<h4/>").html(dict["text"]);
+	break;	
+    case "h5":
+	var sum = $("<h5/>").html(dict["text"]);
+	break;	
+    case "h6":
+	var sum = $("<h6/>").html(dict["text"]);
+	break;	
+    default:
+	var sum = $("<summary/>").html(dict["text"]);
+    }
     return sum;
 }
 
