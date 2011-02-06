@@ -1,29 +1,8 @@
 // hand in a jquery obj
 function compile(obj,doc) {
-    // container for displayed meta info
-    var header = $("<header />");
+    // handle meta information
+    var header = gen_meta(doc['meta']);
     obj.append(header);
-    
-    // handle meta information to be displayed
-    var meta = doc["meta"];
-    if(meta['title'])
-	header.append($("<h1></h1>",{html:meta['title'],
-			"id":"title"}));
-    if(meta['author'])
-	header.append($("<h2></h2>",{html:meta['author'],
-			"id":"author"}));
-
-    // meta container
-    var metaCont = gen_meta(meta);
-    header.append(metaCont);
-
-    // fold away most of the meta info
-    var metaFold = $("<div/>",{"class":"fold folded"});
-    metaFold.click(function(){
-	    $(".meta").toggle();
-	    $(this).toggleClass("folded");
-	});
-    header.prepend(metaFold);
     
     // container holder
     var cont = $("<div class='cont'></div>");
@@ -37,6 +16,20 @@ function compile(obj,doc) {
 
 // generate meta information
 function gen_meta(meta) {
+    // container for displayed meta info
+    var header = $("<header />");
+    
+    // handle meta information to be displayed
+    if(meta['title']) {
+	header.append($("<h1></h1>",{html:meta['title'],
+			"id":"title"}));
+	document.title = meta['title']+" = Made with Notesoble";
+    }
+    if(meta['author'])
+	header.append($("<h2></h2>",{html:meta['author'],
+			"id":"author"}));
+
+    // meta container
     var metaCont = $("<table/>",{'class':'meta'});
     if(meta['copyright']) {
 	var row = $("<tr/>");
@@ -52,10 +45,20 @@ function gen_meta(meta) {
 			"id":"version"})); 
 	metaCont.append(row)
     }
-    return metaCont;
+    header.append(metaCont);
+
+    // fold away most of the meta info
+    var metaFold = $("<div/>",{"class":"fold folded"});
+    metaFold.click(function(){
+	    $(".meta").toggle();
+	    $(this).toggleClass("folded");
+	});
+    header.prepend(metaFold);
+
+    return header;
 }
 
-// recursively generate the content
+// recursively generate the content sections
 function gen_sections(docs) {
     // if not a list
     // here to handle bad errors
@@ -94,28 +97,27 @@ function gen_text(dict) {
     switch(dict["type"]) {
     case "h1":
     case "section title":
-	var sum = $("<h1/>").html(dict["text"]);
-	break;
+	var s = $("<h1/>").html(dict["text"]); break;
     case "h2":
     case "chapter title":
-	var sum = $("<h2/>").html(dict["text"]);
-	break;	
+	var s = $("<h2/>").html(dict["text"]); break;	
     case "h3":
-	var sum = $("<h3/>").html(dict["text"]);
-	break;	
+	var s = $("<h3/>").html(dict["text"]); break;	
     case "h4":
-	var sum = $("<h4/>").html(dict["text"]);
-	break;	
+	var s = $("<h4/>").html(dict["text"]); break;	
     case "h5":
-	var sum = $("<h5/>").html(dict["text"]);
-	break;	
+	var s = $("<h5/>").html(dict["text"]); break;	
     case "h6":
-	var sum = $("<h6/>").html(dict["text"]);
-	break;	
+	var s = $("<h6/>").html(dict["text"]); break;
+    case "code":
+	var s = $("<pre/>");
+	s.append($("<code/>",{html:dict["text"]}));
+	hljs.highlightBlock(s.find("code")[0]);
+	break;
     default:
-	var sum = $("<summary/>").html(dict["text"]);
+	var s = $("<summary/>").html(dict["text"]);
     }
-    return sum;
+    return s;
 }
 
 $(document).ready(function(){

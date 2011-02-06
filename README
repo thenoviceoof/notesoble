@@ -32,7 +32,7 @@ integrate some sort of persistant protovis thing?
 
 table editor?
 
-emacs/vim (hard) keybindings
+emacs(must be js out there)/vim(hard) keybindings
 
 side-by-side docs/notes
 	     tree'd out structures?
@@ -45,10 +45,6 @@ TODO
 
 Right now, working on generating the detailed documents
       adding bells and whistles
-      	     code highlighting
-	     	  pygments - needs python
-		  syntaxhighlighter
-		  highlight.js
 	     wiki syntax - creole?
 	     	  maybe drop in support for anything
 backend - saving
@@ -64,3 +60,4 @@ HISTORY
 Decided:
 javascript over python for reference compiler
 no wave in a box
+using highlight.js, not pygments or syntaxhighlighter

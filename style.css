@@ -28,15 +28,16 @@ h4 { font-size:1.4em; }
 h5 { font-size:1.2em; }
 h6 { font-size:1em; }
 
-section, summary { 
-    background-color:rgba(0,0,255,0.02); }
+section, summary { background-color:rgba(0,0,255,0.02); }
+
+pre { font-family:monospace; }
 
 .cont > section { margin:0; }
 
-section { border:1px #D0D0D0 solid;
-	  border-left-color:B0B0B0;border-left-width:2px;
-	  margin:0.5em;padding;0.5em;
-	  display:block; }
+code, section { border:1px #D0D0D0 solid;
+		border-left-color:B0B0B0;border-left-width:2px;
+		margin:0.5em;padding;0.5em;
+		display:block; }
 h3, h4, h5, h6, summary { border:1px #D0D0D0 solid;display:block;
 			  margin:0.3em;padding:0.3em; }
 
