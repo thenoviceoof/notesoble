@@ -14,23 +14,9 @@ function compile(obj,doc) {
 			"id":"author"}));
 
     // meta container
-    var metaCont = $("<table/>",{'class':'meta'});
-    if(meta['copyright']) {
-	var row = $("<tr/>");
-	row.append($("<td/>",{html:"Copyright"}));
-	row.append($("<td/>",{html:meta['copyright'],
-			"id":"copyright"}));
-	metaCont.append(row)
-    }
-    if(meta['version']) {
-	var row = $("<tr/>");
-	metaCont.append($("<td/>",{html:"Versions"}));
-	metaCont.append($("<td/>",{html:meta['version'],
-			"id":"version"})); 
-	metaCont.append(row)
-    }
-    
+    var metaCont = gen_meta(meta);
     header.append(metaCont);
+
     // fold away most of the meta info
     var metaFold = $("<div/>",{"class":"fold folded"});
     metaFold.click(function(){
@@ -47,6 +33,26 @@ function compile(obj,doc) {
     var content = gen_sections(doc["docs"]);
     content.addClass("last");
     cont.append(content);
+}
+
+// generate meta information
+function gen_meta(meta) {
+    var metaCont = $("<table/>",{'class':'meta'});
+    if(meta['copyright']) {
+	var row = $("<tr/>");
+	row.append($("<td/>",{html:"Copyright"}));
+	row.append($("<td/>",{html:meta['copyright'],
+			"id":"copyright"}));
+	metaCont.append(row)
+    }
+    if(meta['version']) {
+	var row = $("<tr/>");
+	metaCont.append($("<td/>",{html:"Versions"}));
+	metaCont.append($("<td/>",{html:meta['version'],
+			"id":"version"})); 
+	metaCont.append(row)
+    }
+    return metaCont;
 }
 
 // recursively generate the content
