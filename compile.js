@@ -25,7 +25,12 @@ function compile(obj,doc) {
     }
 
     header.append(metaCont);
-    header.prepend($("<div/>",{"class":"fold folded"}));
+    var metaFold = $("<div/>",{"class":"fold folded"});
+    metaFold.click(function(){
+	    $(".meta").toggle();
+	    $(this).toggleClass("folded");
+	});
+    header.prepend(metaFold);
     
     // container holder
     var cont = $("<div class='cont'></div>");
@@ -46,6 +51,8 @@ function gen_sections(docs) {
     }
     var content = $("<section/>",
 		    {'class':'',});
+    // figure out whether or not we need to fold this
+    var foldp = false;
     for(var i in docs) {
 	if(typeof docs[i] == "string") {
 	    // handle the raw strings
@@ -57,12 +64,15 @@ function gen_sections(docs) {
 	    content.append(sum);
 	} else { 
 	    // it's an array!
+	    foldp = true;
 	    content.append(gen_sections(docs[i]));	    
 	}
     }
-    var fold = $("<div/>",
-		 {'class':'fold'});
-    content.prepend(fold);
+    if(foldp) {
+	var fold = $("<div/>",
+		     {'class':'fold'});
+	content.prepend(fold);
+    }
     return content;
     // maybe hand back the height also?
 }

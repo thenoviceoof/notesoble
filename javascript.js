@@ -1,16 +1,17 @@
 // Hello world!
 
 $(document).ready(function() {
-	$(".cont").filter(":not(.bot)").prepend("<div class='fold'></div>");
-	$(".last .cont").hide();
+	$(".last section").hide();
 
-	$("cont .fold").click(function(e){
+	$(".cont .fold").click(function(e){
 		var p = $(this).parent();
 		if(p.hasClass("last")) {
+		    // expand the section
 		    p.children("section").show();
 		    p.children("section").addClass("last");
 		    p.removeClass("last");
 		} else {
+		    // fold up the section
 		    p.find("section").hide();
 		    p.find(".last").removeClass("last");
 		    p.addClass("last");

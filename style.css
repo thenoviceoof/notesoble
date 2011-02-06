@@ -4,7 +4,8 @@ body { margin:0;padding:0;
 
 header { display:block; 
 	 background-color:rgba(0,255,0,0.1);
-	 padding:0.2em;margin:0; }
+	 padding:0.2em;margin:0;
+	 border-bottom:3px #C0C0C0 solid;}
 header #title { }
 header #author { }
 h1,h2,h3,h4,h5,h6 { margin:0; }
