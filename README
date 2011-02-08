@@ -38,6 +38,10 @@ side-by-side docs/notes
 
 handle notes and other asides
 
+handle patching: allow people to make changes to local copies
+       maybe like git's model
+       versioning!
+
 --------------------------------------------------
 TODO
 --------------------------------------------------

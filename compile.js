@@ -120,14 +120,7 @@ function gen_text(dict) {
     case "math":
 	var s = $("<div/>",{html:"$$"+dict["text"]+"$$",
 			     "class":"math",'id':'aoeu'});
-	MathJax.Hub.Queue(["Typeset",MathJax.Hub,"aoeu"]);
-	//var q = MathJax.Hub.queue;
-	//var math = null;
-	/*q.Push(function(){
-		math = MathJax.Hub.getAllJax("aoeu")[0];
-	    });
-	    q.Push(["Text",math,s[0].innerHTML]);*/
-	//window.setTimeout('MathJax.Hub.Queue(["Typeset",MathJax.Hub,"aoeu"])',1000);
+	MathJax.Hub.Queue(["Typeset",MathJax.Hub,s[0]]);
 	break;
     default:
 	var s = $("<summary/>").html(dict["text"]);
