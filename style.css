@@ -2,17 +2,22 @@ body { margin:0;padding:0;
        position:absolute;left:0;top:0;
        width:100%; } 
 
+div#content {
+    margin:2em auto;width:60em;
+}
+
 header { display:block; 
-	 background-color:rgba(0,255,0,0.1);
-	 padding:0.2em;margin:0;
-	 border-bottom:3px #C0C0C0 solid;}
+	 background-color:rgba(0,230,0,0.5);
+	 border-radius:2em 2em 0 0;
+	 padding:1.2em 1em 0.5em 1em;margin:0;
+	 border-bottom:3px #C0C0C0 solid; }
 header h1, header h2 { background-color:rgba(0,0,0,0); }
-header h1#title { font-size:2.8em; }
-header h2#author { font-size:1.6em; }
+header h1#title { font-size:2.8em;margin-bottom:0.4em; }
+header h2#author { font-size:1.6em;margin-bottom:0.5em; }
 
 .meta { border:2px #c0c0c0 solid;margin:0.5em;padding:0.5em;
 	display:none; width:auto;}
-.meta td { border:2px #c0c0c0 solid;
+.meta td { border:2px #a0a0a0 solid;
 	   padding:0.4em;
 	   font-style:italic;
 	   font-size:1.4em; }
@@ -20,7 +25,8 @@ header h2#author { font-size:1.6em; }
 	      font-style:normal; }
 header #copyright { margin:1em 4em; }
 
-h1,h2,h3,h4,h5,h6 { margin:0;font-weight:bold; }
+h1,h2,h3,h4,h5,h6 { margin:0;font-weight:bold;
+		  font-family:sans-serif;}
 h1 { font-size:2em; }
 h2 { font-size:1.8em; }
 h3 { font-size:1.6em; }
@@ -30,11 +36,11 @@ h6 { font-size:1em; }
 
 .fold { border:0.8em solid rgba(0,0,0,0);
 	display:inline-block;float:left;
-	width:0;margin:0.2em;padding:0;
+	width:0;margin:0.2em 0.4em 0.2em 0.2em;padding:0;
 	cursor:pointer;
-	border-width:1em 0.8em 0 0.8em;
+	border-width:1.6em 0.8em 0 0.8em;
 	border-color:gray rgba(255,255,255,0); }
-.last > .fold, .folded { border-width:0.8em 0 0.8em 1em;
+.last > .fold, .folded { border-width:0.8em 0 0.8em 1.6em;
 			 border-color:rgba(255,255,255,0) gray; }
 
 section, summary { background-color:rgba(0,0,255,0.02); }

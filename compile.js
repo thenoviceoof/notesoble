@@ -12,8 +12,27 @@ function compile(obj,doc) {
     
     // run the content generator
     var content = gen_sections(doc["docs"]);
-    content.addClass("last");
+
+    // drill down to the last
+    if(!doc['meta']['last-height']) {
+	doc['meta']['last-height'] = 2;
+    }
+    insert_last(content,doc['meta']['last-height']);
+
+
+    // add a the content to the container
     cont.append(content);
+}
+
+function insert_last(content,height) {
+    if(height==1) {
+	$(content).addClass("last");
+    } else {
+	var children = $(content).children("section");
+	children.each(function(i,c) {
+		insert_last(c,height-1);
+	    });
+    }
 }
 
 // generate meta information
@@ -62,13 +81,11 @@ function gen_meta(meta) {
 
 // recursively generate the content sections
 function gen_sections(docs) {
-    // if not a list
-    // here to handle bad errors
+    // if not a list:
     if(typeof docs == "string") {
 	return gen_text({"text":docs});
     }
-    var content = $("<section/>",
-		    {'class':'',});
+    var content = $("<section/>", {'class':''});
     // figure out whether or not we need to fold this
     var foldp = false;
     for(var i in docs) {
@@ -130,5 +147,5 @@ function gen_text(dict) {
 }
 
 $(document).ready(function(){
-	compile($("body"),data);
+	compile($("div#content"),data);
     });
