@@ -1,5 +1,10 @@
 // Hello world!
 
+// actually run the compiler
+$(document).ready(function(){
+	compile($("div#content"),data);
+    });
+
 $(document).ready(function() {
 	$(".last section").hide();
 
@@ -17,6 +22,7 @@ $(document).ready(function() {
 		    p.addClass("last");
 		}
 	    });
+	// Math jax
 	MathJax.Hub.Config({
 		extensions: ["tex2jax.js"],
 		    jax:["input/TeX","output/HTML-CSS"],

@@ -24,6 +24,7 @@ function compile(obj,doc) {
     cont.append(content);
 }
 
+// recursively find the level at which last should be inserted
 function insert_last(content,height) {
     if(height==1) {
 	$(content).addClass("last");
@@ -114,7 +115,7 @@ function gen_sections(docs) {
 
 function gen_text(dict) {
     switch(dict["type"]) {
-    case "h1":
+    case "h1": // handle the headers
     case "section title":
 	var s = $("<h1/>").html(dict["text"]); break;
     case "h2":
@@ -128,13 +129,13 @@ function gen_text(dict) {
 	var s = $("<h5/>").html(dict["text"]); break;	
     case "h6":
 	var s = $("<h6/>").html(dict["text"]); break;
-    case "code":
+    case "code": // discrete block of code
 	var s = $("<pre/>");
 	s.html("<caption>Code:</caption>");
 	s.append($("<code/>",{html:dict["text"]}));
 	hljs.highlightBlock(s.find("code")[0]);
 	break;
-    case "math":
+    case "math": // discrete block of math
 	var s = $("<div/>",{html:"$$"+dict["text"]+"$$",
 			     "class":"math",'id':'aoeu'});
 	MathJax.Hub.Queue(["Typeset",MathJax.Hub,s[0]]);
@@ -145,7 +146,3 @@ function gen_text(dict) {
     }
     return s;
 }
-
-$(document).ready(function(){
-	compile($("div#content"),data);
-    });

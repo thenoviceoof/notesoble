@@ -1,0 +1,74 @@
+**********************************************************************
+TODO
+Notesoble / Drill-docs
+Last updated 2011/2/19
+**********************************************************************
+
+IDEAS
+--------------------------------------------------
+
+2 ways to do things when folding out: hide previous, or keep
+  default - keep
+
+resource tracking - auto, by convention ~ latex tracking
+	 reference integration?
+	 use <cite>
+
+auto indexing - words
+
+integrate some sort of persistant protovis thing?
+
+table editor?
+
+emacs(must be js out there)/vim(hard) keybindings
+
+side-by-side docs/notes
+	     tree'd out structures?
+	     how to keep the proportions good
+
+handle notes and other asides
+
+handle patching: allow people to make changes to local copies
+       maybe like git's model
+       versioning!
+
+Allow searchers from Google to drill down to the search terms
+
+--------------------------------------------------
+TODO
+--------------------------------------------------
+
+Right now, working on generating the detailed documents
+ * adding bells and whistles
+ * creole wiki parser
+   * http://www.ivan.fomichev.name/2008/04/javascript-creole-10-wiki-markup-parser.html
+   * Bejesus, he can't comment his code?! what the fuck is wrong with him??
+ * parsewiki.js
+   * http://randomactsofcoding.blogspot.com/2009/08/parsewikijs-javascript-wiki-parsing.html
+ * wikimedia
+   * http://en.wikipedia.org/wiki/User:Pilaf/InstaView
+ * wikiwyg
+   * http://www.wikiwyg.net/
+inline MathJax
+
+backend - saving
+frontend, editing
+
+ * more bells and whistles
+   * drawing - feather
+   * side-by-side things
+   * index building
+     
+     
+
+--------------------------------------------------
+HISTORY
+--------------------------------------------------
+
+Decided:
+javascript over python for reference compiler
+no wave in a box
+using highlight.js, not pygments or syntaxhighlighter
+swapable wiki syntax
+use MathJax
+
