@@ -1,0 +1,17 @@
+h1 {
+    font-size:2em;
+}
+
+h2 {
+    font-size:1.7em;
+}
+
+h3 {
+    font-size:1.5em;
+}
+
+div {
+    margin:0.2em 1em;
+    padding:0.2em;
+    border:#E0E0E0 1px solid;
+}
