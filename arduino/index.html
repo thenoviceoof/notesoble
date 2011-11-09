@@ -1,4 +1,4 @@
-<!doctype html>
+3<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="reset.css" />
@@ -147,17 +147,17 @@
 	    <li>Haven't had much experience ordering from outside of the states, but <a href="http://arduino.cc/en/Main/Buy">arduino.cc maintains a big list of suppliers.</a></li>
 	  </ul>
 
-	  <p>An uptodate list is at maintained by the folks over at Arduino.cc: <a href="http://arduino.cc/en/Main/Buy">list by region</a> (aw yeah savin' on shipping!)</p>
+	  <p>An up-to-date list is at maintained by the folks over at Arduino.cc: <a href="http://arduino.cc/en/Main/Buy">list by region</a> (aw yeah savin' on shipping!)</p>
 	</div>
 	<div>
 	  <h3>Install the software</h3>
 	  <input type="checkbox" />
 	  <p>Download the Arduino software</p>
 	  <p>
-	    Currently version 0022
+	    You want the latest version of the software: version 22 (or more accurately, 0022) is currently the latest. arduino.cc has a nice download page for all teh major platforms (Windows, OS X (Mac), Linux), so head on over and download it. You'll need to have java installed for arduino to work: http://java.com/en/download/testjava.jsp. If the test failed, you need to install java from http://java.com
 	  </p>
 	  <p>
-	    Okay, let's make sure it runs
+	    Okay, let's make sure it runs: unzip the file you just downloaded and double click on the arduino program. You should get a box that looks similar to this ### screenshot.
 	  </p>
 	  <input type="checkbox" />
 	  <p>Download the USB drivers</p>
@@ -165,9 +165,10 @@
 	    Okay, now we need drivers. Which ones we need depend on the Arduino you have, and which OS you're using
 
 	    <div>Wait! What's a driver?</div>
+	    <p>A driver is a piece of software that allows the arduino software (the blue, boxy program we just ran) to talk to the arduino hardware (the physical board).</p>
 
 	    <div>Wait! How do you tell which Arduino you have?</div>
-	    <p>If you've been given the Arduino in a workshop, your presenter should be able to tell you what model you have. Otherwise, go to the page and squint at the various forms until you got it</p>
+	    <p>If you've been given the Arduino in a workshop, your presenter should be able to tell you what model you have. Otherwise, go to the page and squint at the various forms until you find which one is yours. If you don't see yours, it might be homebrew or a custom derivative.</p>
 
 	    <ul>
 	      <li>Uno</li>
@@ -183,41 +184,133 @@
 	<div>
 	  <input type="checkbox" /><h3>Connect to the Arduino</h3>
 	  <p>Plug it in</p>
-	  Put the rectangular end of the USB cable into your computer
-	  Put the square end of the USB cable into the Arduino
-
-	  Troubleshooting
+	  <p>You should have a USB cable: if you don't have a A-B USB cable (image here ###), you should be able to grab one for around 5USD. There's really only one way to fit the USB cable between your computer and your arduino.</p>
+	  <p>Which end goes where?</p>
+	  <p>Put the rectangular end of the USB cable into your computer</p>
+	  <p>Put the square end of the USB cable into the Arduino</p>
 
 	  <p>Open the blink demo</p>
+	  <p>If you don't have your arduino software still open, open it back up. Now, open the menu File>Examples>Basic>Blink: it will open a new window and you should see some code in the new arduino window. Choose your board under the menu Tools>Board. Click the verify ("play") button: you should get a "Done Compiling" message at the bottom of the window.</p>
+	  <p>Step-by-step</p>
+	  <p>### Pictures</p>
+
 	  <p>Upload the sketch</p>
+	  <p>Now that the code has been verified, we can actually upload it to the board: making sure that the arduino is connected, click the upload button (sideways arrow). After a few seconds, a "Successful Upload" message should display at the bottom of the window, and the LED built into the arduino should start to blink!</p>
+	  <p>Troubleshooting</p>
+	  <p>If the upload fails, trying hitting the reset button when you upload: some older boards can't auto-reset</p>
 	</div>
 
 	<div>
 	  <input type="checkbox" /><h3>How to use different electrical components</h3>
+	  <p>Note: it is a good idea to power down (disconnect) the board when you connect or disconnect various electrical components to it (aside from the USB cable, obviously).</p>
+
 	  <p>External LED</p>
+	  <p>Since there is only one LED on the board, if we want more LED action we need to hook up external LEDs. </p>
+	  Do we HAVE to use a resistor? Does the pull up offer enough resistance?
+
+	  What's a pin?
+	  What sorts of pins are there?
+
+	  How to think about voltage?
+
+	  Code: digitalOut
+
 	  How do you breadboard?
+
+
 	  <p>One light, two light, red light, green light</p>
+	  Okay, so how do you use multiple LEDs? In this case, we hook up two LEDs to two different pins, and then call digitalout on each of them.
+	  Hooking them to the same pin means they work exactly the same
+
+	  diagram
+
+	  example code (turn one on, turn the other off)
+
+	  The code goes first, then second, but it's quick enough that we can't tell
+
 	  <p>Speaker</p>
+	  One way to do it is with digitalOut, and switch that really fast
+
+	  How does digital audio work?
+	  Continuous vs. discrete
+
+	  diagram
+
+	  example code
+
+	  example wav?
+	  
 	  <p>Switch</p>
+	  Hooking up the switch, digitalIn
+
+	  example diagram
+
+	  example code
+
 	  <p>Pots</p>
+	  AnalogRead - get a 
+
+	  how to hook up a pot
+
+	  example diagram
+
+	  exmaple code
+
 	  <p>Photoresistor</p>
+
+	  Some thing as a pot, but with light
+
+	  copy pot content
 	</div>
 
 	<div>
 	  <input type="checkbox" /><h3>Frolic through some code</h3>
 	  <p>Programming!</p>
+	  Why programming?
+	  
 	  <p>Math!</p>
+	  How to do math: +, -, *, /	  
+
 	  <p>Variables!</p>
-	  <p>Types!</p>
+	  
+	  <p>Types!</p> (sub cat this)
+
+	  Ints
+
+	  overflow
+
 	  <p>If statements!</p>
+	  What's true?
+
+	  if this, then this
+
+	  if this, then this, or else this
+
+	  Example - switch
+
 	  <p>Loops!</p>
+	  for
+
+	  while?
+
 	  <p>Functions!</p>
-	  <p>Interrupts!</p>
+	  
+
+	  <p>Interrupts!</p> (sub cat)
+	  ? - might require gcc
+
 	</div>
 
 	<div>
 	  <input type="checkbox" /><h3>Putting it all together</h3>
-	  Theremin?
+	  Theremin - what it is? video, etc
+
+	  Basic ideas - read the photoresistor (check once in a while), change the output of the speaker
+
+	  example diagram
+
+	  example code
+
 	</div>
       </div>
       <div>
