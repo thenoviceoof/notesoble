@@ -1,4 +1,4 @@
-3<!doctype html>
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="reset.css" />
@@ -171,7 +171,8 @@
 	    <p>If you've been given the Arduino in a workshop, your presenter should be able to tell you what model you have. Otherwise, go to the page and squint at the various forms until you find which one is yours. If you don't see yours, it might be homebrew or a custom derivative.</p>
 
 	    <ul>
-	      <li>Uno</li>
+	      <lh>Still don't know which one you have?</lh>
+	      <li>Uno <p>It looks like </p></li>
 	      <li>Duemilanove</li>
 	      <li>Diecimila</li>
 	      <li>Lilypad</li>
@@ -182,49 +183,71 @@
 	</div>
 
 	<div>
-	  <input type="checkbox" /><h3>Connect to the Arduino</h3>
+	  <input type="checkbox" />
+	  <h3>Connect to the Arduino</h3>
 	  <p>Plug it in</p>
-	  <p>You should have a USB cable: if you don't have a A-B USB cable (image here ###), you should be able to grab one for around 5USD. There's really only one way to fit the USB cable between your computer and your arduino.</p>
-	  <p>Which end goes where?</p>
-	  <p>Put the rectangular end of the USB cable into your computer</p>
-	  <p>Put the square end of the USB cable into the Arduino</p>
+	  <p>You should have a USB cable: if you don't have a A-B USB cable, you should be able to grab one for around 5USD. There's really only one way to fit the USB cable between your computer and your arduino.</p>
+	  What is an A-B USB cable?
+	  Image
+	  <p>Wait, which end goes where?</p>
+	  <p>Put the rectangular end of the USB cable into your computer: put the square end of the USB cable into the Arduino. </p>
 
 	  <p>Open the blink demo</p>
 	  <p>If you don't have your arduino software still open, open it back up. Now, open the menu File>Examples>Basic>Blink: it will open a new window and you should see some code in the new arduino window. Choose your board under the menu Tools>Board. Click the verify ("play") button: you should get a "Done Compiling" message at the bottom of the window.</p>
 	  <p>Step-by-step</p>
-	  <p>### Pictures</p>
+	  What the Arduino software looks like:
+	  Where to get the Blink demo:
+	  Where play/verify and where the messages pop up:
+
 
 	  <p>Upload the sketch</p>
 	  <p>Now that the code has been verified, we can actually upload it to the board: making sure that the arduino is connected, click the upload button (sideways arrow). After a few seconds, a "Successful Upload" message should display at the bottom of the window, and the LED built into the arduino should start to blink!</p>
+
 	  <p>Troubleshooting</p>
 	  <p>If the upload fails, trying hitting the reset button when you upload: some older boards can't auto-reset</p>
 	</div>
 
 	<div>
-	  <input type="checkbox" /><h3>How to use different electrical components</h3>
+	  <input type="checkbox" />
+	  <h3>How to use different electrical components</h3>
 	  <p>Note: it is a good idea to power down (disconnect) the board when you connect or disconnect various electrical components to it (aside from the USB cable, obviously).</p>
 
 	  <p>External LED</p>
 	  <p>Since there is only one LED on the board, if we want more LED action we need to hook up external LEDs. </p>
-	  Do we HAVE to use a resistor? Does the pull up offer enough resistance?
+	  ### Do we HAVE to use a resistor? Does the pull up offer enough resistance?
 
 	  What's a pin?
+	  A pin is a the way the microcontroller talks with the outside world, named so because of the pins that extend from the packaging of the component.
+
 	  What sorts of pins are there?
+	  First, we distinguish what pins do: are they talking, or listening? A single pin can't do both at the same time, similar to how listening with your mouth is pretty difficult. This is why many methods of electronic communication require at least 2 pins: there are ways to talk with only one pin, but they require their own constraints.
 
 	  How to think about voltage?
+	  By analogy: if electricity is analogous to water, a battery pumps water up a hill. Then, if current (water) flows over a resistor (waterfall) it drops some voltage.
+	  More rigorously: ### gonna punt on this
 
 	  Code: digitalOut
+	  ###
 
-	  How do you breadboard?
+	  If you can, use a breadboard.
+	  This makes it easy to connect things in serial (linking together parts in serial).
+
+	  How to breadboard?
+	  If you're with a workshop, they should cover this.
+	  Otherwise, you should have a breadboard (### pic), a collection of wires (### pic), an arduino, and whatever components you need (resistors, capacitors, etc). Now, each row of the breadboard is electrically connected, as well as the "rails" which run down the side of the breadboards (your breadboard should look similar, but may be missing the rails). ###
 
 
 	  <p>One light, two light, red light, green light</p>
 	  Okay, so how do you use multiple LEDs? In this case, we hook up two LEDs to two different pins, and then call digitalout on each of them.
+
+	  diagram
+
 	  Hooking them to the same pin means they work exactly the same
 
 	  diagram
 
 	  example code (turn one on, turn the other off)
+	  ###
 
 	  The code goes first, then second, but it's quick enough that we can't tell
 
