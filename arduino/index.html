@@ -59,15 +59,15 @@
 
 	  <h3>Wait, slow down!</h3>
 	  <div>
-	    <h4>What's programming language?</h4>
-	    <p>It's pretty much the way </p>
+	    <h4>What's a programming language?</h4>
+	    <p>It's a language, but one both humans and computers can understand. Usually, one writes a file filled with commands following a certain programming language, which is compiled into bits and bytes run by the computer.</p>
 
 	    <h4>Hmm, what's Processing?</h4>
-	    <p></p>
+	    <p>A language meant for non-programmers</p>
 	  </div>
 
 	  <h3>Huh, how do I learn more?</h3>
-	  <p></p>
+	  <p>For more about why you should learn Arduino, follow()</p>
 	</div>
 
 	<div>
@@ -196,8 +196,11 @@
 	  <p>If you don't have your arduino software still open, open it back up. Now, open the menu File>Examples>Basic>Blink: it will open a new window and you should see some code in the new arduino window. Choose your board under the menu Tools>Board. Click the verify ("play") button: you should get a "Done Compiling" message at the bottom of the window.</p>
 	  <p>Step-by-step</p>
 	  What the Arduino software looks like:
+	  diagram
 	  Where to get the Blink demo:
+	  diagram(s)
 	  Where play/verify and where the messages pop up:
+	  diagram(s)
 
 
 	  <p>Upload the sketch</p>
@@ -238,17 +241,18 @@
 
 
 	  <p>One light, two light, red light, green light</p>
-	  Okay, so how do you use multiple LEDs? In this case, we hook up two LEDs to two different pins, and then call digitalout on each of them.
+	  Okay, so how do you use multiple LEDs? If you hooked them to the same pin, then they would work exactly the same
 
 	  diagram
 
-	  Hooking them to the same pin means they work exactly the same
+	  But if we instead wanted more control over our LEDs, we could hook them into two different pins, and then control each LED seperately by calling digitalout on each pin
 
 	  diagram
 
-	  example code (turn one on, turn the other off)
+	  example code - blink them at two different frequencies
 	  ###
 
+	  But this code 
 	  The code goes first, then second, but it's quick enough that we can't tell
 
 	  <p>Speaker</p>
@@ -288,13 +292,17 @@
 
 	<div>
 	  <input type="checkbox" /><h3>Frolic through some code</h3>
-	  <p>Programming!</p>
-	  Why programming?
+	  <p>Now that we've met a veritable horde of electronic sensors and actuators, what about doing something interesting? This requires a program to stitch all the inputs and outputs together. So far we've been showing very simple example programs, but there's much more you can do.</p>
+
+	  Why should you learn to program?
+	  Taking charge of your computer: don't let it push you around.
 	  
+	  Skip this, unless you ask for it
 	  <p>Math!</p>
 	  How to do math: +, -, *, /	  
 
 	  <p>Variables!</p>
+	  a variable is a box...
 	  
 	  <p>Types!</p> (sub cat this)
 
