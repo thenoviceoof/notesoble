@@ -1,0 +1,554 @@
+ - What is <a href="http://arduino.cc/">Arduino?</a>
+   - It's an easy to use microcontroller platform
+
+     | more
+       It's an easy way to make something smart, or bring computing
+       power to the real world
+
+     | What's a microcontroller?
+       A small computer, usually dedicated to one task, unlike the
+       multi-tasking general computers that you're probably used
+       to. For instance, smart washing machines and ??? use
+       microcontrollers instead of a full-blown computer
+
+     | What can you do with an Arduino?
+       - <a href="http://www.youtube.com/watch?v=pn_hxGk-6LA" target="_blank">Add electronics to art</a>
+
+       - <a href="http://arduino.cc/blog/2011/08/30/arduino-tree-climbing-robot-as-the-first-challenge/" target="_blank">Drive a robot</a>
+
+       - <a href="http://antipastohw.blogspot.com/2008/10/using-inputshield-to-make-open-source.html" target="_blank">Make a gaming platform</a>
+
+       - <a href="http://sanguino.cc/" target="_blank">Control a 3D printer</a>
+
+       - <a href="http://www.youtube.com/watch?v=L4a89n4ZJ5w" target="_blank">Interact with clothes</a>
+
+       - <a href="http://arduiniana.org/projects/the-reverse-geo-cache-puzzle/" target="_blank">Create cool gifts</a>
+
+       - <a href="http://www.chriseckert.com/Sculpture/037_gimme/gallery.html" target="_blank">Panhandle for you</a>
+
+       - <a href="http://www.chrismarion.net/index.php?option=com_content&view=article&id=121:firehero&catid=43:pyrotechnics&Itemid=226" target="_blank">Play with fire for you</a>
+
+       - <a href="http://www.botanicalls.com/archived_kits/twitter/" target="_blank">Let your plants tweet</a> (<a href="http://www.sparkfun.com/tutorials/144" target="_blank">maybe a tweeting keg is more your speed?</a>)
+
+       - <a href="http://www.arduino.cc/playground/Projects/ArduinoUsers/" target="_blank">Etc (arduino.cc)</a>,
+	 <a href="http://www.instructables.com/tag/type-id/category-technology/channel-arduino/" target="_blank">Etc (Instructables)</a>,
+	 <a href="http://hackaday.com/category/android-hacks/" target="_blank">Etc (Hack-a-day)</a>,
+	 <a href="http://blog.makezine.com/archive/category/arduino" target="_blank">Etc (Make)</a>
+
+     | Why use an Arduino?
+     
+       | Arduino is easy to learn
+
+         The Arduino programming language was built on <a
+         href="http://processing.org/">Processing</a>, a language that
+         was meant to be picked up by non-technical people like
+         artists. Your first win is in minutes, not days or years:
+         just upload the first demo, and you're there.
+
+         Language constructs are just enough (nothing fancy), wraps
+         low-level things nicely, one-download IDE+beginning sketches,
+         works with USB almost out of the box, and you don't need a
+         dedicated programmer.
+
+         | What's a programming language?
+
+           It's a language, but one both humans and computers can
+           understand. Usually, one writes a file filled with commands
+           following a certain programming language, which is compiled
+           into bits and bytes run by the computer.
+
+         | What's Processing?
+
+           A language meant for non-programmers
+
+         | How do I learn more?
+
+           For more about why you should learn Arduino, follow###
+
+       | Arduino is (relatively) cheap
+
+         True,
+         <a href="http://hackaday.com/2010/06/22/ti-makes-a-big-bid-for-the-hobby-market/">there are cheaper boards out there</a>,
+         but the other factors
+         listed here more than make up for whatever wallet pains the
+         $30 for an Arduino will put you at
+
+         Otherwise, you might be stuck programming on an actual
+         computer, might blow your motherboard with reverse
+         polarity. Dev boards go for a little above the price
+         point. Besides, you don't need to eat for a few days,
+         right?
+
+         | Where can I get an Arduino?
+
+           Hold your horses! Let's wait for the actual tutorial-portion
+           of the tutorial to get to that. Or you can skip ahead.
+
+       | Arduino is kind of a big deal (community)
+
+         People everywhere use Arduino: it really jumped out of the
+         more traditional EE community and made it's home with artists
+         and non-techs, enabling a "make" culture that encourages
+         tinkering and, well, making.
+
+       | Arduino is extensible
+
+         There are these things called shields that expand the
+         capabilities of Arduino boards.
+
+       | Arduino is open source
+         
+         This means you are free to do anything you please with the
+         arduino platform
+
+       | Arduino is good enough
+       
+         You can't play Crysis on it, but it can enable all sorts of
+         smart applications. Just don't expect it to stop you from
+         crashing a car
+
+     | Arduino types
+     
+       - Main boards
+
+         These boards are kind of the workhorse of the Arduino family:
+         they contain just enough processing power to be interesting,
+         but also balance cost.
+
+       - Beefy boards
+       
+         Usually postfixed with "mega", these have more processing
+         power, memory, and input/output pins for larger projects.
+
+       - Tiny boards
+       
+         When space is at a premium.
+
+       - Special boards
+
+         Usually fill some niche, like wireless communication.
+
+     | History
+
+       Arduino has had a long and illustrious history, beginning in
+       2005.
+
+       You know what, I'm not going to write what others have already
+       talked about: <a
+       href="http://en.wikipedia.org/wiki/Arduino#History">Here's the
+       Wikipedia article</a>. <a
+       href="http://arduino.cc/en/Main/Boards">Board ancestry</a></p>
+
+ - How do you use an Arduino?
+
+   Install the software, plug it in, upload the blink demo, rejoice.
+
+   | Wait! Can you go through that slower?
+
+     | Get an Arduino
+
+       If you're following this as part of a workshop, then you should
+       have boards provided to you. NO! STEALING BAD! BAD HUMAN!
+
+       | Not in a workshop?
+
+         There are a metric fuckton of places to get an Arduino.
+
+         | In the states?
+
+           <a href="http://www.sparkfun.com/">Sparkfun</a>: caters to hobbyists. They carry so many Arduino things, including the latest <a href="http://www.sparkfun.com/products/9950">Uno</a>
+
+           <a href="http://www.makershed.com/Arduinos_Accessories_s/43.htm">Make</a>: in addition to putting out <a href="http://www.makershed.com/Arduinos_Accessories_s/43.htm">Make magazine</a>, they also enable makers, and carry Arduino stuff. <a href="http://www.makershed.com/product_p/mksp4.htm">Arduino Uno</a>
+
+           <a href="###">Adafruit</a>: basically an electronics tutorial company that happens to sell the stuff you need to do the tutorials. <a href="http://www.adafruit.com/products/50">Arduino Uno</a>
+
+         | Not in the states?
+
+           Haven't had much experience ordering from outside of the
+           states, but <a
+           href="http://arduino.cc/en/Main/Buy">arduino.cc maintains a
+           big list of suppliers.</a>
+
+         An up-to-date list is at maintained by the folks over at
+         Arduino.cc: <a href="http://arduino.cc/en/Main/Buy">list by
+         region</a> (aw yeah savin' on shipping!)
+
+     | Install the software
+
+       | Download the Arduino software
+
+         You want the latest version of the software: version 22 (or
+         more accurately, 0022) is currently the latest. arduino.cc
+         has a nice download page for all teh major platforms
+         (Windows, OS X (Mac), Linux), so head on over and download
+         it. You'll need to have java installed for arduino to work:
+         http://java.com/en/download/testjava.jsp. If the test failed,
+         you need to install java from http://java.com
+
+         Okay, let's make sure it runs: unzip the file you just
+         downloaded and double click on the arduino program. You
+         should get a box that looks similar to this ### screenshot.
+
+       | Download the USB drivers
+
+         Okay, now we need drivers. Which ones we need depend on the
+         Arduino you have, and which OS you're using
+
+         | Wait! What's a driver?
+
+           A driver is a piece of software that allows the arduino
+           software (the blue, boxy program we just ran) to talk to
+           the arduino hardware (the physical board).
+
+         | Wait! How do you tell which Arduino you have?
+
+           If you've been given the Arduino in a workshop, your
+           presenter should be able to tell you what model you
+           have. Otherwise, go to the page and squint at the various
+           forms until you find which one is yours. If you don't see
+           yours, it might be homebrew or a custom derivative.
+
+           | Still don't know which one you have?
+
+             Uno <p>It looks like </p>
+
+             Duemilanove
+             
+             Diecimila
+
+             Lilypad
+             
+             BT
+             
+             Otherwise:
+
+       | Connect to the Arduino
+
+         | Plug it in
+
+           You should have a USB cable: if you don't have a A-B USB
+           cable, you should be able to grab one for around
+           5USD. There's really only one way to fit the USB cable
+           between your computer and your arduino.
+
+           | What is an A-B USB cable?
+
+             Image ###
+
+           | Wait, which end goes where?
+             
+             Put the rectangular end of the USB cable into your
+             computer: put the square end of the USB cable into the
+             Arduino.
+
+       | Open the blink demo
+
+         If you don't have your arduino software still open, open it
+         back up. Now, open the menu File>Examples>Basic>Blink: it
+         will open a new window and you should see some code in the
+         new arduino window. Choose your board under the menu
+         Tools>Board. Click the verify ("play") button: you should get
+         a "Done Compiling" message at the bottom of the window.
+
+         | A step-by-step breakdown
+
+          What the Arduino software looks like:
+
+          diagram
+
+          Where to get the Blink demo:
+
+          diagram(s)
+
+          Where play/verify and where the messages pop up:
+
+          diagram(s)
+
+       | Upload the sketch
+
+         Now that the code has been verified, we can actually upload
+         it to the board: making sure that the arduino is connected,
+         click the upload button (sideways arrow). After a few
+         seconds, a "Successful Upload" message should display at the
+         bottom of the window, and the LED built into the arduino
+         should start to blink!
+
+         | Troubleshooting
+
+           If the upload fails, trying hitting the reset button when
+           you upload: some older boards can't auto-reset
+
+       | How to use different electrical components
+
+         Note: it is a good idea to power down (disconnect) the board
+         when you connect or disconnect various electrical components
+         to it (aside from the USB cable, obviously).
+
+        | External LED
+
+          Since there is only one LED on the board, if we want more
+          LED action we need to hook up external LEDs.
+
+          ### Do we HAVE to use a resistor? Does the pull up offer
+              enough resistance?
+
+          | What's a pin?
+
+            A pin is a the way the microcontroller talks with the
+            outside world, named so because of the pins that extend
+            from the packaging of the component.
+
+          | What sorts of pins are there?
+
+            First, we distinguish what pins do: are they talking, or
+            listening? A single pin can't do both at the same time,
+            similar to how listening with your mouth is pretty
+            difficult. This is why many methods of electronic
+            communication require at least 2 pins: there are ways to
+            talk with only one pin, but they require their own
+            constraints.
+
+          | How to think about voltage?
+
+            By analogy: if electricity is analogous to water, a
+            battery pumps water up a hill. Then, if current (water)
+            flows over a resistor (waterfall) it drops some voltage.
+
+            More rigorously: ### gonna punt on this
+
+            Code: digitalOut
+            ###
+
+            If you can, use a breadboard.
+
+            This makes it easy to connect things in serial (linking
+            together parts in serial).
+
+          | How to breadboard?
+
+            If you're with a workshop, they should cover this.
+
+            Otherwise, you should have a breadboard (### pic), a
+            collection of wires (### pic), an arduino, and whatever
+            components you need (resistors, capacitors, etc). Now,
+            each row of the breadboard is electrically connected, as
+            well as the "rails" which run down the side of the
+            breadboards (your breadboard should look similar, but may
+            be missing the rails). ###
+
+
+        | One light, two light, red light, green light
+
+          Okay, so how do you use multiple LEDs? If you hooked them to
+          the same pin, then they would work exactly the same
+
+          diagram
+
+          But if we instead wanted more control over our LEDs, we
+          could hook them into two different pins, and then control
+          each LED seperately by calling digitalout on each pin
+
+          diagram
+
+          example code - blink them at two different frequencies ###
+
+          But this code 
+
+          The code goes first, then second, but it's quick enough that
+          we can't tell
+
+        | Speaker
+
+          One way to do it is with digitalOut, and switch that really fast
+
+          How does digital audio work?
+          
+          Continuous vs. discrete
+
+          diagram
+
+          example code
+
+          example wav?
+
+        | Switch
+
+          Hooking up the switch, digitalIn
+
+          example diagram
+
+          example code
+
+        | Pots
+
+          AnalogRead - get a 
+
+          how to hook up a pot
+
+          example diagram
+
+          exmaple code
+
+        | Photoresistor
+
+          Some thing as a pot, but with light
+
+          copy pot content
+
+      | Frolic through some code
+
+        Now that we've met a veritable horde of electronic sensors and
+        actuators, what about doing something interesting? This
+        requires a program to stitch all the inputs and outputs
+        together. So far we've been showing very simple example
+        programs, but there's much more you can do.
+
+        | Why should you learn to program?
+
+          Taking charge of your computer: don't let it push you around.
+
+        | Math!
+
+          How to do math: +, -, *, /
+
+        | Variables!
+
+          a variable is a box...
+
+        | Types! (sub cat this)
+
+          Ints
+
+          overflow
+
+        | If statements!
+
+          What's true?
+
+          if this, then this
+
+          if this, then this, or else this
+
+          | Example - switch
+
+        | Loops!
+
+          | for
+
+          | while?
+
+        | Functions!
+
+        | Interrupts! (sub cat)
+
+          ? - might require gcc
+
+      | Putting it all together
+
+        | Theremin - what it is? video, etc
+
+          Basic ideas - read the photoresistor (check once in a
+          while), change the output of the speaker
+
+          example diagram
+
+          example code
+
+    | Okay, that was fun. What now?
+
+      | Next steps
+
+        Where better to go next than the Arduino.cc site itself?
+
+        http://www.arduino.cc/en/Tutorial/HomePage
+
+        Adafruit also has a bunch of beginner tutorials, with many
+        wider electrical projects ranging outside of Arduino.
+
+      | Wait! How do you do this specific thing??
+
+        | How do you control lots of LEDs?
+
+          Get yourself an LED shield. A start can be had from <a
+          href="http://www.seeedstudio.com/depot/rgb-led-shield-v14-kit-p-430.html">Seeedstudio</a>. 16
+          LEDs not enough for you? What about 64 LEDs on a shield from
+          <a
+          href="http://timewitharduino.blogspot.com/2011/08/new-in-store-bi-color-led-mini-display.html">TimeWithArduino.com</a>?
+          Need higher power? Want to break out of the boards?
+
+        | How do you control motors?
+
+          Almost any sort of motor will demand more "electricity" than
+          an Arduino can provide. You'll want a certain shield for a
+          certain type of motor:
+
+          | DC motor
+
+            <a href="http://www.ladyada.net/make/mshield/">LadyAda's mshield</a> looks promising
+
+          | Stepper motor
+
+          | Servo
+
+        | How do I talk with it with my computer?
+
+          <a href="http://arduino.cc/en/Reference/serial">Use
+          serial.</a> You can use the built-in serial monitor to talk
+          to your board.
+
+        | How do I get arduinos to talk to each other?
+
+          You can use serial (again), or talk wireless with something
+          like xbee
+
+        | How do you get cameras working with it?
+
+          Cameras are really high bandwidth, as well as memory
+          intensive, so using cameras with Arduinos is not such a good
+          idea. Really. However, there are <a
+          href="http://www.arduino.cc/playground/Main/InterfacingWithHardware#Visual">plenty
+          of hacks involving controlling cameras with Arduinos</a>.
+
+        | How can I get internet?
+
+          Surprise! <a
+          href="http://arduino.cc/en/Main/ArduinoBoardEthernet">There's
+          a specialty Arduino board with an Ethernet jack built into
+          it</a>, as well as an <a
+          href="http://arduino.cc/en/Main/ArduinoEthernetShield">official
+          ethernet shield</a>. You want wifi? <a
+          href="http://www.sparkfun.com/products/9954">Sparkfun
+          carries a WiFly shield</a>. If you're actually looking for
+          the more mundane problem of networking several Arduinos
+          together, then you should see the above section on getting
+          Arduinos to talk to each other.
+
+        | How can I voice activate it?
+
+          Getting your Arduino to respond to verbal commands would be
+          extremely difficult, but you can connect a microphone to the
+          analog I/O pins easily enough... but wait! It'll almost
+          definitely be too quiet, so you need to amplify the
+          signal. Sparkfun has packaged it up into a board
+          http://www.sparkfun.com/products/9964
+
+        | How do I make a robot with it?
+
+          Attach some motors through a motor shield get some switches
+          to act as bump sensors.  Read the switches with digitalread
+          Move motors appropriately.  Hell, why am I even trying to
+          explain this here? You should go google it, there's a ton of
+          material on this.
+
+        | But, but, where's my humanoid robot?!
+
+          As of now, you're gonna have to go work in a robotics lab
+
+        | How do I get it to serve me coffee in the morning?
+
+          The science of coffee automation rapidly advances at a
+          breakneck pace: if you wish to enter this cut-throat field,
+          this wiki is chockfull of information that may prove useful
+          to your efforts. Godspeed.
+
+        Thanks for reading!
